@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const http = require('http');
 const feedRoutes = require('./routes/feed');
+// const feedControllers = require('./controlles/feed');
 
 const app = express();
 
@@ -34,8 +35,11 @@ http.get({
 // setTimeout(() => {
 //      console.log('after time out ',jsonObject);
 // },3000);
-setTimeout(() => {
-    module.exports.jsonObject;
-},3000);
+
+// setTimeout(() => {
+//     module.exports.jsonObject;
+// },3000);
+
+
 
 

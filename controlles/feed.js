@@ -1,10 +1,10 @@
 var path = require('path');
-// console.log(path.resolve(__dirname, '../app.js'))
 var updater = require(path.resolve(__dirname, '../app.js')); // connecting between feed.js to app.js
 var obj = updater.jsonObject;
 setTimeout(() => {
     console.log('after time out ', obj)
 },3000);
+
 exports.getPosts = (req, res, next) => {
     res.json(getRandomPics(obj,4));
 };
@@ -19,6 +19,7 @@ exports.createPost = (req, res, next) => {
 };
 
 function getRandomPics(object, n) {
+    console.log('random is starting');
     let output = [];
     for (var i = 0; i < n; i++) {
     var properties = Object.getOwnPropertyNames(object);
